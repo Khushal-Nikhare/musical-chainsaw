@@ -12,7 +12,7 @@ _app = None
 
 import os
 
-FIREBASE_CREDENTIALS_json = os.environ.get('MY_SECRET_JSON')
+FIREBASE_CREDENTIALS_json = os.environ.get('FIREBASE_CREDENTIALS_JSON')
 if FIREBASE_CREDENTIALS_json:
     with open('habit-tracker-firebase-adminsdk-fbsvc.json', 'w') as f:
         f.write(FIREBASE_CREDENTIALS_json)
