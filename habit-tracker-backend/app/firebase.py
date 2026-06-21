@@ -12,16 +12,15 @@ _app = None
 
 import os
 
-FIREBASE_CREDENTIALS_json = os.environ.get('FIREBASE_CREDENTIALS_JSON')
-if FIREBASE_CREDENTIALS_json:
-    with open('habit-tracker-firebase-adminsdk-fbsvc.json', 'w') as f:
-        f.write(FIREBASE_CREDENTIALS_json)
 
 def init_firebase():
     global _app
     if _app is not None:
         return _app
-
+    FIREBASE_CREDENTIALS_json = os.environ.get('FIREBASE_CREDENTIALS_JSON')
+    if FIREBASE_CREDENTIALS_json:
+        with open('habit-tracker-firebase-adminsdk-fbsvc.json', 'w') as f:
+            f.write(FIREBASE_CREDENTIALS_json)
     credentials_path = os.getenv("FIREBASE_CREDENTIALS_PATH")
     if not credentials_path:
         raise RuntimeError("FIREBASE_CREDENTIALS_PATH environment variable is not set")
