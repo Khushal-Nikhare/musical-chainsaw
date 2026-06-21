@@ -1,0 +1,38 @@
+# General
+.DS_Store
+Thumbs.db
+.env
+.env.local
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python (Backend)
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.venv/
+.pytest_cache/
+*.sqlite3
+
+# Node / Javascript (Frontend)
+node_modules/
+dist/
+build/
+.next/
+*.log
+
+# Graphify Outputs
+graphify-out/
+.graphify_*
+
+.agents/
+.codex/
+.uv-cache/
+
+habit-tracker-backend\habit-tracker-firebase-adminsdk-fbsvc.json
