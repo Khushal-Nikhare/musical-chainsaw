@@ -10,6 +10,12 @@ load_dotenv()
 
 _app = None
 
+import os
+
+FIREBASE_CREDENTIALS_json = os.environ.get('MY_SECRET_JSON')
+if FIREBASE_CREDENTIALS_json:
+    with open('habit-tracker-firebase-adminsdk-fbsvc.json', 'w') as f:
+        f.write(FIREBASE_CREDENTIALS_json)
 
 def init_firebase():
     global _app
